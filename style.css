@@ -1,0 +1,268 @@
+:root {
+  /* colors */
+
+  --clr-primary: #000000;
+  --clr-secondary: #333333;
+  --clr-text: #4f4f4f;
+  --clr-accent: #f2994a;
+  --clr-card: #bdbdbd;
+
+  /* Font Weights */
+
+  --fw-reg: 400;
+  --fw-med: 500;
+  --fw-semi-bold: 600;
+  --fw-bold: 700;
+
+  /* Font Sizes */
+
+  /* 8px */
+  --fs-50: 0.5rem;
+  /* 10px */
+  --fs-100: 0.625rem;
+  /* 12px */
+  --fs-200: 0.75rem;
+  /* 14px */
+  --fs-300: 0.875rem;
+  /* 16px */
+  --fs-400: 1rem;
+  /* 18px */
+  --fs-500: 1.125rem;
+  /* 24px */
+  --fs-600: 1.5rem;
+  /* 36px */
+  --fs-700: 2.25rem;
+  /* 48px */
+  --fs-800: 3rem;
+
+  --fs-heading: var(--fs-600);
+  --fs-text: var(--fs-200);
+  --fs-card-heading: var(--fs-50);
+  --fs-card-text: var(--fs-100);
+  --fs-i-heading: var(--fs-500);
+  --fs-i-sub-heading: var(--fs-400);
+  --fs-label: var(--fs-300);
+  --fs-sub-heading: var(--fs-600);
+  --fs-list-text: var(--fs-400);
+}
+@media (min-width: 50em) {
+  :root {
+    --fs-heading: var(--fs-800);
+    --fs-text: var(--fs-300);
+    --fs-card-heading: var(--fs-100);
+    --fs-card-text: var(--fs-300);
+    --fs-i-heading: var(--fs-600);
+    --fs-i-sub-heading: var(--fs-500);
+    --fs-label: var(--fs-400);
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Playfair Display", serif;
+}
+p {
+  font-family: "Montserrat", sans-serif;
+}
+li {
+  list-style-type: none;
+}
+img {
+  width: 100%;
+}
+
+.name {
+  font-family: "Oswald", sans-serif;
+}
+/* Utility Classes */
+.italic {
+  font-weight: var(--fw-med);
+  font-style: italic;
+}
+.container {
+  width: 90%;
+  margin-inline: auto;
+  padding-block: 1.5em;
+}
+.flex {
+  display: flex;
+}
+.wide {
+  justify-content: space-between;
+}
+.center {
+  align-items: center;
+}
+.gap-sm {
+  gap: 0.25em;
+}
+.gap-md {
+  gap: 0.5em;
+}
+.gap-lg {
+  gap: 1em;
+}
+.accent {
+  color: var(--clr-accent);
+}
+
+/* General Styling */
+
+/* *============ Section-1 ============== */
+
+.section-1 {
+  padding-block: 1em;
+}
+.text-icon {
+  margin-top: 1rem;
+  align-items: flex-start;
+}
+.dots {
+  width: 25px;
+  margin-top: 0.25em;
+}
+.text {
+  font-size: var(--fs-text);
+  color: var(--clr-text);
+}
+.img {
+  margin-top: 1rem;
+}
+.img img {
+  border-radius: 12px;
+}
+
+/* *======== Section-2 =========== */
+
+.section-2 {
+  padding-block: 1em;
+}
+
+/* Card Icons */
+.card {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  row-gap: 1em;
+}
+.icon-1 {
+  column-width: 100%;
+}
+.card-heading {
+  font-size: var(--fs-card-heading);
+  font-weight: var(--fw-bold);
+  color: var(--clr-card);
+}
+.card-text {
+  font-size: var(--fs-card-text);
+  font-weight: var(--fw-med);
+}
+
+/* Ingridients */
+
+.ingredient-heading {
+  font-size: var(--fs-i-heading);
+  font-weight: var(--fw-bold);
+}
+.ingredient-label {
+  margin-block: 1em;
+}
+.label-heading {
+  font-size: var(--fs-i-sub-heading);
+  font-style: italic;
+  font-weight: var(--fw-reg);
+  margin-bottom: 1rem;
+}
+.label {
+  font-size: var(--fs-label);
+  font-family: "Montserrat", sans-serif;
+  color: #333333;
+}
+.input-group {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5em;
+}
+.bold {
+  font-weight: var(--fw-bold);
+}
+.instruction-heading {
+  font-size: var(--fs-sub-heading);
+  font-weight: var(--fw-bold);
+  margin-bottom: 1em;
+}
+.instruction-label {
+  margin-block: 1em;
+}
+.list-item {
+  display: flex;
+  gap: 1em;
+  align-items: flex-start;
+  margin-block: 1rem;
+}
+.number {
+  font-family: "Playfair Display", serif;
+  background-color: var(--clr-accent);
+  color: white;
+  font-size: var(--fs-600);
+  font-weight: var(--fw-bold);
+  padding-inline: 1rem;
+  line-height: 30px;
+  border-radius: 6px;
+}
+.username {
+  font-size: 16px;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+}
+.name {
+  color: rgb(213, 46, 46);
+  font-weight: 600;
+  font-size: 18px;
+}
+@media (min-width: 570px) and (max-width: 807px) {
+  .container {
+    width: 90%;
+  }
+  p {
+    max-width: 50ch;
+  }
+  label {
+    max-width: 35ch;
+  }
+}
+@media (min-width: 808px) {
+  .container {
+    max-width: 1000px;
+  }
+  p {
+    max-width: 45ch;
+  }
+  label {
+    max-width: 35ch;
+  }
+  .section-2 {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .card {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    padding: 3em;
+    border-radius: 12px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    background: #ffffff;
+  }
+}
